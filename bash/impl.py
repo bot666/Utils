@@ -40,6 +40,8 @@ def find_str(strpattern="", file=""):
 
 
 def diff(fromfile=None, tofile=None):
+    if os.path.isdir(fromfile or tofile):
+        return
     fromlines = open(fromfile).readlines()
     tolines = open(tofile).readlines()
     diff = difflib.context_diff(fromlines, tolines, fromfile, tofile)
