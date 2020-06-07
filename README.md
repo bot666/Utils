@@ -5,6 +5,7 @@ Bash adjacent utils and tools for cmd
 Bash commands available:
   ls
   pwd
+  findstr
   
 
 ## Steps to setup local:
