@@ -9,7 +9,9 @@ __all__ = ['pwd', 'ls', 'find_str', 'diff']
 
 
 def pwd():
-    print(os.getcwd())
+    wd = os.getcwd()
+    print(wd)
+    return wd
 
 
 def ls(dir_name=''):
@@ -24,10 +26,11 @@ def find_str(strpattern="", file=""):
     if os.path.isfile(file):
         if file.endswith('.pyc'):
             return
+
         pattern = f'^{strpattern}.|.{strpattern}.|.{strpattern}$'
         try:
             with open(file,encoding="utf-8") as target:
-                print(f"searching in file {file}")
+                print(f"searching in file {os.path.abspath('.')}/{file}")
                 lines = target.readlines()
                 for line in zip(range(1, len(lines), 1), lines):
                     if re.search(pattern, line[1]):
@@ -39,6 +42,8 @@ def find_str(strpattern="", file=""):
             pass
 
     elif os.path.isdir(file):
+        if file.startswith(".git"):
+            return
         inside = os.listdir(file)
         os.chdir(file)
         for i in inside:
