@@ -1,3 +1,4 @@
 from bash import *
 
-find_str('import', "../bash")
+find_str('import', "../../Util")
+
