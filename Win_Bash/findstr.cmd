@@ -5,4 +5,4 @@ cd ..
 %str
 %folder
 
-python3 -c 'from Bash import *; find_str(' + %str% + ',' + %folder% + ')'
+python -c 'from bash import *; find_str(' + %str% + ',' + %folder% + ')'
