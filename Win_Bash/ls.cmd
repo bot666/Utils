@@ -4,4 +4,4 @@ cd ..
 
 %folder
 
-python3 -c 'from Bash import *; ls(' + %folder% + ')'
+python -c 'from bash import *; ls(' + %folder% + ')'

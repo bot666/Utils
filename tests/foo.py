@@ -1,4 +1,7 @@
 from bash import *
 
-find_str('import', "../../Util")
+find_str('def', "..")
+
+ls(pwd())
+pwd()
 

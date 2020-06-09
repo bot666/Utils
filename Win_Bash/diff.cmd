@@ -5,4 +5,4 @@ cd ..
 %from
 %to
 
-python3 -c 'from Bash import *; diff(' + %from% + ',' + %to% + ')'
+python -c 'from bash import *; diff(' + %from% + ',' + %to% + ')'
