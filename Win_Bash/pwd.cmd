@@ -2,5 +2,5 @@
 
 cd ..
 
-python -c 'from bash import *; pwd()'
+python -c "from bash import *; pwd()"
 
